@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
       <div className="App">
         <Navbar />
       </div>
+      <Switch>
+        <Route path="/" component={Dashboard} />>
+      </Switch>
     </BrowserRouter>
   );
 }
