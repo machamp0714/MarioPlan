@@ -9,7 +9,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 const createNotification = (notification) => {
   return admin
     .firestore()
-    .collection("notification")
+    .collection("notifications")
     .add(notification)
     .then((doc) => {
       console.log("Added Notification", doc);
